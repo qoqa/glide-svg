@@ -16,9 +16,9 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.bumptech.glide:glide:4.3.1'
-    implementation 'com.github.bumptech.glide:annotations:4.3.1'
-    implementation 'com.caverock:androidsvg:1.2.1'
+    api 'com.github.bumptech.glide:glide:4.3.1'
+    api 'com.github.bumptech.glide:annotations:4.3.1'
+    api 'com.caverock:androidsvg:1.2.1'
 
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     testImplementation 'junit:junit:4.12'
