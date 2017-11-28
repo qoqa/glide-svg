@@ -1,4 +1,4 @@
-package com.qoqa.qoqa.glide.svg
+package ch.qoqa.glide.svg
 
 import android.graphics.Bitmap
 import android.graphics.Canvas

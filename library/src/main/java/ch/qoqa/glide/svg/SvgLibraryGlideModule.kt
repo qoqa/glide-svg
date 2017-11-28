@@ -7,8 +7,6 @@ import com.bumptech.glide.Registry
 import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.module.LibraryGlideModule
 import com.caverock.androidsvg.SVG
-import com.qoqa.qoqa.glide.svg.SvgDecoder
-import com.qoqa.qoqa.glide.svg.SvgDrawableTranscoder
 import java.io.InputStream
 
 @GlideModule

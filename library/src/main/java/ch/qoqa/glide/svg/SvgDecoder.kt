@@ -1,4 +1,4 @@
-package com.qoqa.qoqa.glide.svg
+package ch.qoqa.glide.svg
 
 import com.bumptech.glide.load.Options
 import com.bumptech.glide.load.ResourceDecoder
