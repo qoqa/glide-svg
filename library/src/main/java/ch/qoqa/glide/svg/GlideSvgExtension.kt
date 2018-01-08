@@ -13,8 +13,6 @@ class GlideSvgExtension private constructor() {
         @JvmStatic
         @GlideType(Bitmap::class)
         fun asSvg(requestBuilder: RequestBuilder<Bitmap>) {
-            requestBuilder
-                    .listener(SvgSoftwareLayerSetter())
         }
     }
 }
