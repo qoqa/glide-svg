@@ -12,7 +12,7 @@ repositories {
 ```
 dependencies {
   ...
-  implementation 'com.github.qoqa:glide-svg:1.0.0'
+  implementation 'com.github.qoqa:glide-svg:2.0.0'
 }
 ```
 
