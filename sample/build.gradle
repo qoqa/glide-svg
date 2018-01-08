@@ -4,12 +4,12 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
 
     defaultConfig {
         applicationId "ch.qoqa.sample"
         minSdkVersion 14
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
 
@@ -26,10 +26,10 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:appcompat-v7:27.0.2'
 
     implementation (project(':library'))
 
-    implementation 'com.github.bumptech.glide:glide:4.3.1'
-    kapt 'com.github.bumptech.glide:compiler:4.3.1'
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    kapt 'com.github.bumptech.glide:compiler:4.5.0'
 }
