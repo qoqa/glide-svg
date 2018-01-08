@@ -3,9 +3,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ImageView
-        android:id="@+id/sample_image_view"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_centerInParent="true"/>
+
+    <ListView
+        android:id="@+id/sample_images"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </RelativeLayout>

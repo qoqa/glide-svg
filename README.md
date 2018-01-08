@@ -19,7 +19,6 @@ dependencies {
 ## Usage
 ```kotlin
 GlideApp.with(this)
-  .asSvg()
   .load(url)
   .into(picto_view)
 ```
