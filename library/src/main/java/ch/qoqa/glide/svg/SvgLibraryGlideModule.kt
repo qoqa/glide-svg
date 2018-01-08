@@ -11,8 +11,8 @@ import java.io.InputStream
 
 @GlideModule
 class SvgLibraryGlideModule : LibraryGlideModule() {
-    override fun registerComponents(context: Context?, glide: Glide?, registry: Registry?) {
-        registry?.register(SVG::class.java, Bitmap::class.java, SvgDrawableTranscoder())
-                ?.append(InputStream::class.java, SVG::class.java, SvgDecoder())
+    override fun registerComponents(context: Context, glide: Glide, registry: Registry) {
+        registry.register(SVG::class.java, Bitmap::class.java, SvgDrawableTranscoder())
+                .append(InputStream::class.java, SVG::class.java, SvgDecoder())
     }
 }
