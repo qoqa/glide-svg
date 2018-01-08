@@ -1,10 +1,7 @@
 package ch.qoqa.glide.svg
 
-import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
 import android.graphics.drawable.PictureDrawable
 import com.bumptech.glide.load.Options
 import com.bumptech.glide.load.engine.Resource
@@ -12,8 +9,8 @@ import com.bumptech.glide.load.resource.SimpleResource
 import com.bumptech.glide.load.resource.transcode.ResourceTranscoder
 import com.caverock.androidsvg.SVG
 
-class SvgDrawableTranscoder(private val context: Context) : ResourceTranscoder<SVG, Drawable> {
-    override fun transcode(toTranscode: Resource<SVG>, options: Options): Resource<Drawable> {
+class SvgBitmapTranscoder : ResourceTranscoder<SVG, Bitmap> {
+    override fun transcode(toTranscode: Resource<SVG>, options: Options): Resource<Bitmap> {
         val svg = toTranscode.get()
         val width = svg.documentWidth.toInt().takeIf { it > 0 }
                 ?: (svg.documentViewBox.right - svg.documentViewBox.left).toInt()
@@ -27,6 +24,6 @@ class SvgDrawableTranscoder(private val context: Context) : ResourceTranscoder<S
         val canvas = Canvas(bitmap)
         canvas.drawPicture(drawable.picture)
 
-        return SimpleResource(BitmapDrawable(context.resources, bitmap))
+        return SimpleResource(bitmap)
     }
 }
