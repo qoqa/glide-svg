@@ -1,5 +1,6 @@
 package ch.qoqa.glide.svg
 
+import android.graphics.Rect
 import com.bumptech.glide.load.Options
 import com.bumptech.glide.load.ResourceDecoder
 import com.bumptech.glide.load.engine.Resource
@@ -19,8 +20,14 @@ class SvgInputStreamDecoder : ResourceDecoder<InputStream, SVG> {
     override fun decode(source: InputStream, width: Int, height: Int, options: Options): Resource<SVG>? {
         try {
             val svg = SVG.getFromInputStream(source)
+
+            if (svg.documentViewBox == null) {
+                svg.setDocumentViewBox(0f, 0f, svg.documentWidth, svg.documentHeight)
+            }
+
             svg.documentWidth = width.toFloat()
             svg.documentHeight = height.toFloat()
+
             return SimpleResource(svg)
         } catch (ex: SVGParseException) {
             throw IOException("Cannot load SVG from stream", ex)
