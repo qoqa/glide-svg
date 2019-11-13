@@ -10,7 +10,7 @@ import com.bumptech.glide.module.AppGlideModule
 class SampleAppGlideModule : AppGlideModule() {
     override fun isManifestParsingEnabled() = false
 
-    override fun applyOptions(context: Context?, builder: GlideBuilder?) {
+    override fun applyOptions(context: Context, builder: GlideBuilder) {
         super.applyOptions(context, builder)
 
         builder?.setLogLevel(Log.DEBUG)
