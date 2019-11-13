@@ -13,7 +13,7 @@ import java.io.InputStream
 /**
  * Decodes an SVG internal representation from an [InputStream].
  */
-class SvgDecoder : ResourceDecoder<InputStream, SVG> {
+class SvgInputStreamDecoder : ResourceDecoder<InputStream, SVG> {
     override fun handles(source: InputStream, options: Options): Boolean = true
 
     override fun decode(source: InputStream, width: Int, height: Int, options: Options): Resource<SVG>? {

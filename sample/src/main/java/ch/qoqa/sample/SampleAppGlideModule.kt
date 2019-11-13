@@ -12,7 +12,6 @@ class SampleAppGlideModule : AppGlideModule() {
 
     override fun applyOptions(context: Context, builder: GlideBuilder) {
         super.applyOptions(context, builder)
-
-        builder?.setLogLevel(Log.DEBUG)
+        builder.setLogLevel(Log.DEBUG)
     }
 }
