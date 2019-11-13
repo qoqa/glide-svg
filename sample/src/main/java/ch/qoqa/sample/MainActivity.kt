@@ -4,11 +4,11 @@ import android.annotation.SuppressLint
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.main_activity.*
 
 class MainActivity : AppCompatActivity() {
@@ -20,17 +20,29 @@ class MainActivity : AppCompatActivity() {
 
         // TODO add example with bitmap
         val images = listOf(
-                Images {
-                    GlideApp.with(this)
-                            .load("https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/android.svg?1")
-                            .into(it)
-                },
-                Images {
-                    it.setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_ATOP)
-                    GlideApp.with(this)
-                            .load("https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/android.svg?2")
-                            .into(it)
-                }
+            Images {
+                GlideApp.with(this)
+                    .load("https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/android.svg?1")
+                    .into(it)
+            },
+            Images {
+                it.setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_ATOP)
+                GlideApp.with(this)
+                    .load("https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/android.svg?2")
+                    .into(it)
+            },
+            Images {
+                it.setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_ATOP)
+                GlideApp.with(this)
+                    .load("<svg height=\"100\" width=\"100\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"black\" stroke-width=\"3\" fill=\"red\" /></svg> ")
+                    .into(it)
+            },
+            Images {
+                it.setColorFilter(Color.RED, PorterDuff.Mode.SRC_ATOP)
+                GlideApp.with(this)
+                    .load("<svg height=\"100\" width=\"100\"><circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"black\" stroke-width=\"3\" fill=\"red\" /></svg> ")
+                    .into(it)
+            }
         )
 
         sample_images.adapter = object : BaseAdapter() {
