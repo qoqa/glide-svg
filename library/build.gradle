@@ -3,14 +3,22 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'maven-publish'
 
-group='com.github.Kevinrob'
-
 android {
     compileSdkVersion 32
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 32
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'com.github.qoqa'
+            artifactId 'glide-svg'
+            version '4.0.0'
+        }
     }
 }
 
