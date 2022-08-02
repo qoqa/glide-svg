@@ -9,14 +9,15 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.main_activity.*
+import ch.qoqa.sample.databinding.MainActivityBinding
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val binding = MainActivityBinding.inflate(layoutInflater)
 
-        setContentView(R.layout.main_activity)
+        setContentView(binding.root)
 
         // TODO add example with bitmap
         val images = listOf(
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             }
         )
 
-        sample_images.adapter = object : BaseAdapter() {
+        binding.sampleImages.adapter = object : BaseAdapter() {
             override fun getItem(position: Int) = images[position]
             override fun getItemId(position: Int) = position.toLong()
             override fun getCount() = images.size

@@ -1,29 +1,27 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven-publish'
 
 group='com.github.Kevinrob'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 32
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 32
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 }
 
 dependencies {
-    api 'com.github.bumptech.glide:glide:4.10.0'
-    api 'com.github.bumptech.glide:annotations:4.10.0'
-    kapt 'com.github.bumptech.glide:compiler:4.10.0'
+    api 'com.github.bumptech.glide:glide:4.13.2'
+    api 'com.github.bumptech.glide:annotations:4.13.2'
+    kapt 'com.github.bumptech.glide:compiler:4.13.2'
     api 'com.caverock:androidsvg-aar:1.4'
 
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
