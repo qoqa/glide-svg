@@ -10,6 +10,7 @@ android {
         targetSdkVersion 32
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    namespace = "ch.qoqa.glide"
 }
 
 publishing {
@@ -18,6 +19,10 @@ publishing {
             groupId 'com.github.qoqa'
             artifactId 'glide-svg'
             version '4.0.0'
+
+            afterEvaluate {
+                from(components["release"])
+            }
         }
     }
 }
