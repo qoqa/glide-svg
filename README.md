@@ -1,7 +1,7 @@
 # Glide SVG
 
 ## Installation
-Use [JitPack.io](https://jitpack.io/#qoqa/glide-svg/4.0.1)
+Use [JitPack.io](https://jitpack.io/#qoqa/glide-svg/4.0.2)
 
 ```
 repositories {
@@ -12,7 +12,7 @@ repositories {
 ```
 dependencies {
   ...
-  implementation 'com.github.qoqa:glide-svg:4.0.1'
+  implementation 'com.github.qoqa:glide-svg:4.0.2'
 }
 ```
 
