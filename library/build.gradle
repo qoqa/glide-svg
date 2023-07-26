@@ -13,7 +13,7 @@ android {
         targetSdk 34
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    namespace = "ch.qoqa.glide"
+    namespace = "com.duck.glide_svg"
 }
 
 dependencies {
