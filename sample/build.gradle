@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.devtools.ksp'
 
 android {
-    compileSdkVersion 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "ch.qoqa.sample"
         minSdkVersion 14
-        targetSdkVersion 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -32,8 +32,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.6.1'
 
-    implementation (project(':library'))
+    implementation "com.github.bumptech.glide:glide:$GlideVersion"
+    ksp "com.github.bumptech.glide:compiler:$GlideVersion"
 
-    implementation 'com.github.bumptech.glide:glide:4.14.2'
-    kapt 'com.github.bumptech.glide:compiler:4.14.2'
+    implementation (project(':library'))
 }
