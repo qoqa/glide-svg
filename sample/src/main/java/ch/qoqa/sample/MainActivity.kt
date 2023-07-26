@@ -10,6 +10,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import ch.qoqa.sample.databinding.MainActivityBinding
+import com.bumptech.glide.Glide
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,25 +23,25 @@ class MainActivity : AppCompatActivity() {
         // TODO add example with bitmap
         val images = listOf(
             Images {
-                GlideApp.with(this)
+                Glide.with(this)
                     .load("https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/android.svg?1")
                     .into(it)
             },
             Images {
                 it.setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_ATOP)
-                GlideApp.with(this)
+                Glide.with(this)
                     .load("https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/android.svg?2")
                     .into(it)
             },
             Images {
                 it.setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_ATOP)
-                GlideApp.with(this)
+                Glide.with(this)
                     .load("<svg height=\"100\" width=\"100\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"black\" stroke-width=\"3\" fill=\"red\" /></svg> ")
                     .into(it)
             },
             Images {
                 it.setColorFilter(Color.RED, PorterDuff.Mode.SRC_ATOP)
-                GlideApp.with(this)
+                Glide.with(this)
                     .load("<svg height=\"100\" width=\"100\"><circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"black\" stroke-width=\"3\" fill=\"red\" /></svg> ")
                     .into(it)
             }
