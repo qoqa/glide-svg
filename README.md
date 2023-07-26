@@ -13,7 +13,7 @@ repositories {
 ```
 dependencies {
   ...
-  implementation 'com.github.projectdelta6:glide-svg:4.0.2'
+  implementation 'com.github.projectdelta6:glide-svg:4.15.1'
 }
 ```
 
