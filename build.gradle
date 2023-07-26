@@ -1,13 +1,18 @@
 buildscript {
-    ext.kotlin_version = '1.8.10'
+    ext.kotlin_version = '1.8.21'
+    ext.GlideVersion = "4.15.1"
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath 'com.android.tools.build:gradle:8.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
+}
+plugins {
+    id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
+    id 'com.google.devtools.ksp' version '1.8.21-1.0.11' apply false
 }
 
 allprojects {
@@ -20,4 +25,9 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+wrapper {
+    gradleVersion = "8.1.0"
+    distributionType = Wrapper.DistributionType.ALL
 }

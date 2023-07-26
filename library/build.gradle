@@ -1,36 +1,25 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'maven-publish'
+apply plugin: 'com.google.devtools.ksp'
+
+//for JitPack
+group = 'com.github.projectdelta6'
 
 android {
-    compileSdkVersion 33
+    compileSdk 34
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 33
+        targetSdk 34
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    namespace = "ch.qoqa.glide"
-}
-
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId 'com.github.qoqa'
-            artifactId 'glide-svg'
-            version '4.0.0'
-
-            afterEvaluate {
-                from(components["release"])
-            }
-        }
-    }
+    namespace = "com.duck.glide_svg"
 }
 
 dependencies {
-    api 'com.github.bumptech.glide:glide:4.14.2'
-    api 'com.github.bumptech.glide:annotations:4.14.2'
-    kapt 'com.github.bumptech.glide:compiler:4.14.2'
+    api "com.github.bumptech.glide:glide:$GlideVersion"
+    api "com.github.bumptech.glide:annotations:$GlideVersion"
+    ksp "com.github.bumptech.glide:compiler:$GlideVersion"
     api 'com.caverock:androidsvg-aar:1.4'
 
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
