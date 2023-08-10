@@ -1,5 +1,9 @@
 # Glide SVG
 
+## Not maintained - Looking for adoption
+⚠️ We don't use it anymore and so, we don't maintained this library.  
+If someone would like to fork it an maintained it, we can post a link here.
+
 ## Installation
 Use [JitPack.io](https://jitpack.io/#qoqa/glide-svg/4.0.2)
 
