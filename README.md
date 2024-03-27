@@ -5,7 +5,8 @@
 If someone would like to fork it an maintained it, we can post a link here.
 
 ## Installation
-Use [JitPack.io](https://jitpack.io/#qoqa/glide-svg/4.0.2)
+Use [![](https://jitpack.io/v/projectdelta6/glide-svg.svg)](https://jitpack.io/#projectdelta6/glide-svg)
+
 
 ```
 repositories {
@@ -16,13 +17,13 @@ repositories {
 ```
 dependencies {
   ...
-  implementation 'com.github.qoqa:glide-svg:4.0.2'
+  implementation 'com.github.projectdelta6:glide-svg:4.15.1'
 }
 ```
 
 ## Usage
 ```kotlin
-GlideApp.with(this)
+Glide.with(this)
   .load(url)
   .into(picto_view)
 ```
